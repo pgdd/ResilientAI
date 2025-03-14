@@ -1,55 +1,55 @@
-# ResilientAI Infrastructure
+# ResilientAI Infrastructure 🚀
 
-In 2025, there is a growing trend of moving away from **global AI cloud services** to **open-source models** that can be deployed locally. This shift is driven by the need to keep **data safe**, reduce costs, and accelerate the development and operational speed of AI systems. Open-source models provide the flexibility to run on local infrastructure, which allows organizations to have full control over their data and computational resources. However, the transition back to local services introduces a challenge: cloud services were initially designed to solve **availability issues** that arose in the 90s when servers would crash or fail due to hardware issues, electricity outages, or other disruptions. To address these challenges, we propose an infrastructure that combines the best of both worlds, using **local resources for cost efficiency** and **cloud failover mechanisms** for high availability and business continuity.
+In 2025, there is a growing trend of moving away from **global AI cloud services** to **open-source models** that can be deployed locally. This shift is driven by the need to keep **data safe** 🔒, reduce costs 💰, and accelerate the development and operational speed of AI systems. Open-source models provide the flexibility to run on local infrastructure, which allows organizations to have full control over their data and computational resources. However, the transition back to local services introduces a challenge: cloud services were initially designed to solve **availability issues** that arose in the 90s when servers would crash or fail due to hardware issues, electricity outages, or other disruptions. To address these challenges, we propose an infrastructure that combines the best of both worlds, using **local resources for cost efficiency** and **cloud failover mechanisms** for high availability and business continuity.
 
-This project leverages a **hybrid infrastructure** to provide a **cost-efficient**, **scalable**, and **reliable solution** for managing public websites, admin panels, and AI-powered services. The infrastructure is designed to seamlessly fall back to cloud services during **electricity outages** or other interruptions in local services, ensuring continuous operation without downtime.
+This project leverages a **hybrid infrastructure** to provide a **cost-efficient**, **scalable**, and **reliable solution** for managing public websites, admin panels, and AI-powered services. The infrastructure is designed to seamlessly fall back to cloud services during **electricity outages** ⚡ or other interruptions in local services, ensuring continuous operation without downtime.
 
-## Table of Contents
+## Table of Contents 📚
 
-- [ResilientAI Infrastructure](#resilientai-infrastructure)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Goal](#goal)
-    - [Cost and Speed Comparison](#cost-and-speed-comparison)
-  - [Comprehensive Cost Estimation](#comprehensive-cost-estimation)
-  - [Detailed Cost and Scaling Information](#detailed-cost-and-scaling-information)
-  - [Specific AI Service Costs](#specific-ai-service-costs)
+- [ResilientAI Infrastructure 🚀](#resilientai-infrastructure-)
+  - [Table of Contents 📚](#table-of-contents-)
+  - [Introduction 🌐](#introduction-)
+  - [Goal 🎯](#goal-)
+    - [Cost and Speed Comparison 📈](#cost-and-speed-comparison-)
+  - [Comprehensive Cost Estimation 💸](#comprehensive-cost-estimation-)
+  - [Detailed Cost and Scaling Information 📊](#detailed-cost-and-scaling-information-)
+  - [Specific AI Service Costs 💻](#specific-ai-service-costs-)
   - [Country-Specific Electricity Costs](#country-specific-electricity-costs)
-  - [Use Case Scenario](#use-case-scenario)
-  - [Scaling Considerations for 2025](#scaling-considerations-for-2025)
-  - [Architecture](#architecture)
-  - [Technologies](#technologies)
-  - [Service Breakdown](#service-breakdown)
-    - [Public Website (Next.js)](#public-website-nextjs)
-    - [Admin Panel (Next.js)](#admin-panel-nextjs)
-    - [AI Bot Services (Python)](#ai-bot-services-python)
-    - [PostgreSQL Databases](#postgresql-databases)
-  - [CI/CD and AWS Integration](#cicd-and-aws-integration)
-    - [CI/CD Pipeline](#cicd-pipeline)
-    - [AWS Integration](#aws-integration)
-  - [Local Development](#local-development)
-  - [Deployment](#deployment)
-  - [End-to-End (E2E) Testing](#end-to-end-e2e-testing)
-    - [Overview](#overview)
-    - [Cypress Setup](#cypress-setup)
-    - [Running the Tests](#running-the-tests)
-  - [Failover Testing](#failover-testing)
-    - [Overview](#overview-1)
-    - [Automation in CI/CD](#automation-in-cicd)
-    - [Contributing](#contributing)
-  - [Diagram](#diagram)
-  - [Development Workflow with GitFlow](#development-workflow-with-gitflow)
+  - [Use Case Scenario 🖥️](#use-case-scenario-️)
+  - [Scaling Considerations for 2025 📈](#scaling-considerations-for-2025-)
+  - [Architecture 🏗️](#architecture-️)
+  - [Technologies 🛠️](#technologies-️)
+  - [Service Breakdown 🧩](#service-breakdown-)
+    - [Public Website (Next.js) 🌐](#public-website-nextjs-)
+    - [Admin Panel (Next.js) 🛠️](#admin-panel-nextjs-️)
+    - [AI Bot Services (Python) 🤖](#ai-bot-services-python-)
+    - [PostgreSQL Databases 🗄️](#postgresql-databases-️)
+  - [CI/CD and AWS Integration 🚀](#cicd-and-aws-integration-)
+    - [CI/CD Pipeline 🔄](#cicd-pipeline-)
+    - [AWS Integration ☁️](#aws-integration-️)
+  - [Local Development 🖥️](#local-development-️)
+  - [Deployment 🚀](#deployment-)
+  - [End-to-End (E2E) Testing 🧪](#end-to-end-e2e-testing-)
+    - [Overview 📋](#overview-)
+    - [Cypress Setup 🛠️](#cypress-setup-️)
+    - [Running the Tests 🏃‍♂️](#running-the-tests-️)
+  - [Failover Testing 🔄](#failover-testing-)
+    - [Overview 📋](#overview--1)
+    - [Automation in CI/CD 🤖](#automation-in-cicd-)
+    - [Contributing 🤝](#contributing-)
+  - [Diagram 🖼️](#diagram-️)
+  - [Development Workflow with GitFlow 🔄](#development-workflow-with-gitflow-)
 
-## Introduction
+## Introduction 🌐
 
-This project is designed to handle both local and cloud infrastructure efficiently, using **Docker** for containerization, **AWS** for cloud deployment, and a **hybrid model** that falls back to the cloud during interruptions. The system is optimized for **cost-efficiency** while still ensuring **high availability** by running the **AI services locally** unless there is an interruption.
+This project is designed to handle both local and cloud infrastructure efficiently, using **Docker** for containerization 🐳, **AWS** for cloud deployment ☁️, and a **hybrid model** that falls back to the cloud during interruptions. The system is optimized for **cost-efficiency** while still ensuring **high availability** by running the **AI services locally** unless there is an interruption.
 
 - **Public Website**: A **static, SEO-optimized** website built with **Next.js**.
 - **Admin Panel**: A **dynamic, interactive** admin panel also built with **Next.js**.
 - **AI Services**: AI models run **locally** on the server for **cost efficiency**, but **switch to the cloud** (AWS) when local resources are unavailable (e.g., electricity outages).
 - **PostgreSQL Databases**: Two **PostgreSQL** databases (staging and production) are hosted on **AWS RDS** for reliability, but local copies are maintained for quick failover.
 
-## Goal
+## Goal 🎯
 
 The primary goal of this infrastructure is to create a **powerful, reliable, and cost-effective system**:
 1. **Cost-Efficiency**: **AI services** can be expensive when running on the cloud. The system is designed to run AI tasks locally on the server to **reduce costs**, switching to **cloud-based services** only when **local infrastructure is unavailable** (e.g., due to power outages).
@@ -57,11 +57,11 @@ The primary goal of this infrastructure is to create a **powerful, reliable, and
 3. **SEO-Optimized Public Website**: The **public website** should be **static and SEO-optimized** for better performance and search engine rankings.
 4. **Dynamic Admin Panel**: The **admin panel** is **dynamic** and allows administrators to interact with the system, manage users, monitor AI bots, and perform other administrative tasks.
 
-### Cost and Speed Comparison
+### Cost and Speed Comparison 📈
 
 In this section, we compare the costs and speed of using full token AI services (e.g., OpenAI, Google Gemini) versus running personal AI on a VPS and a local server machine. This comparison includes electricity costs and initial investment in a computer, considering a scenario where there is a half-day shutdown of the local machine every two months.
 
-## Comprehensive Cost Estimation
+## Comprehensive Cost Estimation 💸
 
 <div style="overflow-x:auto;">
 <table style="width: 100%; border-collapse: collapse;">
@@ -115,9 +115,9 @@ In this section, we compare the costs and speed of using full token AI services 
 </table>
 </div>
 
-## Detailed Cost and Scaling Information
+## Detailed Cost and Scaling Information 📊
 
-## Specific AI Service Costs
+## Specific AI Service Costs 💻
 
 <div style="overflow-x:auto;">
 <table style="width: 100%; border-collapse: collapse;">
@@ -170,7 +170,7 @@ In this section, we compare the costs and speed of using full token AI services 
   <li><strong>France</strong>: Approx. €0.16 per kWh</li>
 </ul>
 
-## Use Case Scenario
+## Use Case Scenario 🖥️
 
 In a scenario where the local machine experiences a half-day shutdown every two months, the cost-effectiveness of each option can vary:
 <ul>
@@ -179,7 +179,7 @@ In a scenario where the local machine experiences a half-day shutdown every two 
   <li><strong>Local Server Machine</strong>: Best for those who need high performance and full data control, with a willingness to handle hardware and maintenance costs.</li>
 </ul>
 
-## Scaling Considerations for 2025
+## Scaling Considerations for 2025 📈
 
 <table style="width:100%; border-collapse:collapse;">
   <thead>
@@ -218,7 +218,7 @@ In a scenario where the local machine experiences a half-day shutdown every two 
   </tbody>
 </table>
 
-## Architecture
+## Architecture 🏗️
 
 The architecture of this project is built around the **hybrid infrastructure** concept. The components of the architecture include:
 
@@ -231,7 +231,7 @@ The architecture of this project is built around the **hybrid infrastructure** c
 
 In case of a local server failure (e.g., power outages), the system automatically switches traffic to the **cloud-based services** running on **AWS**, ensuring **continuous operation**.
 
-## Technologies
+## Technologies 🛠️
 
 - **Next.js**: For both the **public website** (static, SEO-optimized) and the **admin panel** (dynamic and interactive).
 - **Python**: For **AI Bot Services**, using **TensorFlow**, **PyTorch**, or **scikit-learn** for machine learning tasks.
@@ -241,16 +241,16 @@ In case of a local server failure (e.g., power outages), the system automaticall
 - **Route 53**: For **DNS failover** management, ensuring that traffic is routed to the cloud-based services in case the local server is unavailable.
 - **CI/CD**: Automated deployment using **GitHub Actions** or **GitLab CI** for **Docker** container management.
 
-## Service Breakdown
+## Service Breakdown 🧩
 
-### Public Website (Next.js)
+### Public Website (Next.js) 🌐
 
 The **public website** is a **static site** built with **Next.js** for **SEO** optimization. It serves users with content that is pre-rendered, ensuring fast load times and excellent search engine rankings.
 
 - **Static Content**: Optimized for fast delivery and SEO.
 - **Fast and Scalable**: Built to handle high traffic efficiently.
 
-### Admin Panel (Next.js)
+### Admin Panel (Next.js) 🛠️
 
 The **admin panel** is built with **Next.js** to provide a dynamic interface for administrators to manage the application. This service interacts with the backend and offers features such as:
 
@@ -258,7 +258,7 @@ The **admin panel** is built with **Next.js** to provide a dynamic interface for
 - **System Monitoring**: Admins can monitor the AI bots, their performance, and any logs related to their operation.
 - **Content Management**: Allows admins to control the data available in the public website.
 
-### AI Bot Services (Python)
+### AI Bot Services (Python) 🤖
 
 The **AI Bot services** are built using **Python** and are optimized to run locally on your server. This provides a **cost-effective solution** since running AI models on cloud-based resources can be expensive. The system will:
 
@@ -267,7 +267,7 @@ The **AI Bot services** are built using **Python** and are optimized to run loca
   
 Using **Docker**, these services are containerized, making them easy to deploy, test, and manage.
 
-### PostgreSQL Databases
+### PostgreSQL Databases 🗄️
 
 The **PostgreSQL databases** (staging and production) are managed using **AWS RDS** for high availability. Local copies are maintained for quick failover in case of outages.
 
@@ -276,41 +276,41 @@ The **PostgreSQL databases** (staging and production) are managed using **AWS RD
 
 Both databases are replicated and provide automatic failover when the local server is unavailable.
 
-## CI/CD and AWS Integration
+## CI/CD and AWS Integration 🚀
 
-### CI/CD Pipeline
+### CI/CD Pipeline 🔄
 
 1. **Code Changes**: Developers push changes to the repository, triggering the CI/CD pipeline (e.g., GitHub Actions).
 2. **Build Docker Images**: The Docker images for the **web**, **admin**, and **AI bot services** are built and pushed to **Amazon ECR** (Elastic Container Registry).
 3. **Deploy to ECS**: The Docker images are deployed to **Amazon ECS** (Elastic Container Service) for cloud-based operations.
 4. **Automated Database Migrations**: Migrations are applied automatically to both the **staging** and **production** databases.
 
-### AWS Integration
+### AWS Integration ☁️
 
 - **Elastic Load Balancer (ELB)**: Routes traffic to the active servers, whether local or cloud-based.
 - **Route 53**: Handles DNS failover, automatically switching traffic from the local server to the cloud-based infrastructure if the local server fails.
 - **RDS Multi-AZ**: Provides high availability and automatic failover for **PostgreSQL** databases in the cloud.
 
-## Local Development
+## Local Development 🖥️
 
 For local development, **Docker** is used to containerize all services (public website, admin panel, AI bots, and PostgreSQL databases). This ensures a consistent development environment regardless of the underlying infrastructure.
 
 - **Docker Compose** is used to define and manage all services locally.
 - Local instances of **PostgreSQL** (staging and production) are included in the Docker setup for testing.
 
-## Deployment
+## Deployment 🚀
 
 1. **CI/CD**: The CI/CD pipeline builds, tests, and deploys Docker images to **Amazon ECS** or **EC2**.
 2. **Failover**: In case of a local server failure, **Route 53 DNS** automatically switches traffic to cloud-based services running on **AWS ECS**.
 3. **PostgreSQL Failover**: If the local database fails, the system will automatically failover to the cloud-based **PostgreSQL** instances on **AWS RDS**.
 
-## End-to-End (E2E) Testing
+## End-to-End (E2E) Testing 🧪
 
-### Overview
+### Overview 📋
 
 End-to-end (E2E) testing ensures the full system works correctly from the front-end (public website and admin panel) to the backend (AI services and databases). We use **Cypress** for testing the **web interfaces** (public website and admin panel) and simulate real-world scenarios, including failovers.
 
-### Cypress Setup
+### Cypress Setup 🛠️
 
 1. **Install Cypress**: First, install Cypress as a development dependency:
 
@@ -349,7 +349,7 @@ describe('Admin Panel', () => {
 });
 ```
 
-### Running the Tests
+### Running the Tests 🏃‍♂️
 
 To run the tests, execute the following:
 
@@ -359,9 +359,9 @@ npx cypress open
 
 Cypress will open a browser window where you can see the tests run in real-time.
 
-## Failover Testing
+## Failover Testing 🔄
 
-### Overview
+### Overview 📋
 
 Failover testing ensures the robustness and reliability of the infrastructure when switching from local to cloud resources (and vice versa).
 
@@ -371,7 +371,7 @@ Failover testing ensures the robustness and reliability of the infrastructure wh
 2.  **Test DNS Failover**:
     -   Ensure that **Route 53 DNS** health checks correctly route traffic to the cloud-based services during failure and failback to local services when the local server is restored.
 
-### Automation in CI/CD
+### Automation in CI/CD 🤖
 
 You can automate failover testing using **AWS CLI** to check if Route 53 health checks are correctly triggered.
 
@@ -383,7 +383,7 @@ docker-compose down
 aws route53 test-dns-answer --hosted-zone-id <your-hosted-zone-id> --record-name <your-record-name> --record-type A
 ```
 
-### Contributing
+### Contributing 🤝
 
 We welcome contributions! Please follow these steps to contribute:
 
@@ -394,7 +394,7 @@ We welcome contributions! Please follow these steps to contribute:
 
 Ensure that your code is well-tested and documented.
 
-## Diagram
+## Diagram 🖼️
 
 Here is a diagram representing the architecture with local-to-cloud and cloud-to-local switching, **GitFlow** integration (Development → Staging → Production), **End-to-End (E2E) Testing**, **Route 53 DNS failover**, and the **shared database** between the **Admin Panel** and **Public Static Website**, and reflect the **shared database** and the **failover logic** for cloud-based services.:
 ```bash
@@ -411,6 +411,12 @@ Here is a diagram representing the architecture with local-to-cloud and cloud-to
  |   (PostgreSQL)       |    |   (PostgreSQL)        |    |  (Web, Admin, AI)   |
  |   (Local)            |    |   (AWS RDS)           |    |  (Docker Compose)   |
  +----------------------+    +-----------------------+    +---------------------+
+        ^                           ^                       ^
+        |                           |                       |
+        +---------------------+-----------------------------+
+        |                     Shared Database                |
+        |                 (Staging & Production)              |
+        +---------------------------------------------------+
                          ^         |
                          |         |
                    +--------------------+
@@ -463,7 +469,7 @@ Here is a diagram representing the architecture with local-to-cloud and cloud-to
 
 ```
 
-## Development Workflow with GitFlow
+## Development Workflow with GitFlow 🔄
 
 This project follows a structured GitFlow workflow to manage development and deployment across different environments. The process ensures that code is thoroughly tested and validated at each stage before reaching production.
 
