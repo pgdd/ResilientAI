@@ -69,6 +69,7 @@ In this section, we compare the costs and speed of using full token AI services 
       <th style="border: 1px solid #ddd; padding: 8px;">Monthly Electricity Cost (EUR)</th>
       <th style="border: 1px solid #ddd; padding: 8px;">AI Service Cost Details</th>
       <th style="border: 1px solid #ddd; padding: 8px;">Remarks</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Local Machine Resources</th>
     </tr>
   </thead>
   <tbody>
@@ -86,6 +87,7 @@ In this section, we compare the costs and speed of using full token AI services 
         </ul>
       </td>
       <td style="border: 1px solid #ddd; padding: 8px;">No hardware or electricity cost. On-demand AI charges may add up quickly with high usage.</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">N/A</td>
     </tr>
     <tr>
       <td style="border: 1px solid #ddd; padding: 8px;">Custom AI on VPS</td>
@@ -94,6 +96,7 @@ In this section, we compare the costs and speed of using full token AI services 
       <td style="border: 1px solid #ddd; padding: 8px;">18 – 45</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Initial setup cost then minimal per-use cost for video, text, and email services</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Balanced option with control and predictable expenses, including minor electricity cost.</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">N/A</td>
     </tr>
     <tr>
       <td style="border: 1px solid #ddd; padding: 8px;">Custom AI on Local Machine</td>
@@ -102,6 +105,7 @@ In this section, we compare the costs and speed of using full token AI services 
       <td style="border: 1px solid #ddd; padding: 8px;">27 – 63</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Initial setup cost then minimal per-use cost for video, text, and email services</td>
       <td style="border: 1px solid #ddd; padding: 8px;">High upfront investment with very low recurring costs aside from electricity. Full data control, but review local downtime impacts.</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Electricity Consumption: 27 - 63 EUR/month</td>
     </tr>
   </tbody>
 </table>
