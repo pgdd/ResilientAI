@@ -14,7 +14,6 @@ This project leverages a **hybrid infrastructure** to provide a **cost-efficient
   - [Comprehensive Cost Estimation 💸](#comprehensive-cost-estimation-)
   - [Detailed Cost and Scaling Information 📊](#detailed-cost-and-scaling-information-)
   - [Specific AI Service Costs 💻](#specific-ai-service-costs-)
-  - [Country-Specific Electricity Costs](#country-specific-electricity-costs)
   - [Use Case Scenario 🖥️](#use-case-scenario-️)
   - [Scaling Considerations for 2025 📈](#scaling-considerations-for-2025-)
   - [Architecture 🏗️](#architecture-️)
@@ -163,12 +162,6 @@ In this section, we compare the costs and speed of using full token AI services 
 </table>
 </div>
 
-## Country-Specific Electricity Costs
-
-<ul>
-  <li><strong>Malta</strong>: Approx. €0.18 per kWh</li>
-  <li><strong>France</strong>: Approx. €0.16 per kWh</li>
-</ul>
 
 ## Use Case Scenario 🖥️
 
