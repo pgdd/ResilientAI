@@ -13,6 +13,10 @@ This project leverages a **hybrid infrastructure** to provide a **cost-efficient
     - [Cost and Speed Comparison](#cost-and-speed-comparison)
   - [Comprehensive Cost Estimation](#comprehensive-cost-estimation)
   - [Detailed Cost and Scaling Information](#detailed-cost-and-scaling-information)
+  - [Specific AI Service Costs](#specific-ai-service-costs)
+  - [Country-Specific Electricity Costs](#country-specific-electricity-costs)
+  - [Use Case Scenario](#use-case-scenario)
+  - [Scaling Considerations for 2025](#scaling-considerations-for-2025)
   - [Architecture](#architecture)
   - [Technologies](#technologies)
   - [Service Breakdown](#service-breakdown)
@@ -113,15 +117,17 @@ In this section, we compare the costs and speed of using full token AI services 
 
 ## Detailed Cost and Scaling Information
 
-<!-- Specific AI Service Costs -->
-<h3>Specific AI Service Costs</h3>
-<table style="width:100%; border-collapse:collapse;">
+## Specific AI Service Costs
+
+<div style="overflow-x:auto;">
+<table style="width: 100%; border-collapse: collapse;">
   <thead>
     <tr>
       <th style="border: 1px solid #ddd; padding: 8px;">Service</th>
       <th style="border: 1px solid #ddd; padding: 8px;">OpenAI/Google Gemini Cost</th>
       <th style="border: 1px solid #ddd; padding: 8px;">Custom AI Agent on VPS Cost</th>
       <th style="border: 1px solid #ddd; padding: 8px;">Custom AI Agent on Local Machine Cost</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Hosting & AI Computing Cost</th>
     </tr>
   </thead>
   <tbody>
@@ -130,46 +136,51 @@ In this section, we compare the costs and speed of using full token AI services 
       <td style="border: 1px solid #ddd; padding: 8px;">€0.09 - €0.45 per minute</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Initial setup and minimal cost</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Initial setup and minimal cost</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Malta: €0.18/kWh, France: €0.16/kWh</td>
     </tr>
     <tr>
       <td style="border: 1px solid #ddd; padding: 8px;"><strong>Text Generation</strong></td>
       <td style="border: 1px solid #ddd; padding: 8px;">€0.009 - €0.045 per 1,000 tokens</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Initial setup and minimal cost</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Initial setup and minimal cost</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Malta: €0.18/kWh, France: €0.16/kWh</td>
     </tr>
     <tr>
       <td style="border: 1px solid #ddd; padding: 8px;"><strong>Email Automation</strong></td>
       <td style="border: 1px solid #ddd; padding: 8px;">€0.009 - €0.027 per email</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Initial setup and minimal cost</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Initial setup and minimal cost</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Malta: €0.18/kWh, France: €0.16/kWh</td>
     </tr>
     <tr>
       <td style="border: 1px solid #ddd; padding: 8px;"><strong>Average Total Cost</strong></td>
       <td style="border: 1px solid #ddd; padding: 8px;">€0.105 per minute</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Minimal cost after setup</td>
       <td style="border: 1px solid #ddd; padding: 8px;">Minimal cost after setup</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Malta: €0.18/kWh, France: €0.16/kWh</td>
     </tr>
   </tbody>
 </table>
+</div>
 
-<!-- Country-Specific Electricity Costs -->
-<h3>Country-Specific Electricity Costs</h3>
+## Country-Specific Electricity Costs
+
 <ul>
   <li><strong>Malta</strong>: Approx. €0.18 per kWh</li>
   <li><strong>France</strong>: Approx. €0.16 per kWh</li>
 </ul>
 
-<!-- Use Case Scenario -->
-<h3>Use Case Scenario</h3>
-<p>In a scenario where the local machine experiences a half-day shutdown every two months, the cost-effectiveness of each option can vary:</p>
+## Use Case Scenario
+
+In a scenario where the local machine experiences a half-day shutdown every two months, the cost-effectiveness of each option can vary:
 <ul>
   <li><strong>Full Token AI Services</strong>: Ideal for those who prioritize speed and seamless operation without worrying about hardware maintenance or electricity costs.</li>
   <li><strong>Personal AI on VPS</strong>: Suitable for those who want full control over their data and are willing to manage their own infrastructure, potentially saving costs in the long run.</li>
   <li><strong>Local Server Machine</strong>: Best for those who need high performance and full data control, with a willingness to handle hardware and maintenance costs.</li>
 </ul>
 
-<!-- Scaling Considerations for 2025 -->
-<h3>Scaling Considerations for 2025</h3>
+## Scaling Considerations for 2025
+
 <table style="width:100%; border-collapse:collapse;">
   <thead>
     <tr>
